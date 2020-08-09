@@ -2,11 +2,13 @@
  * IMPORTS
  */
 import React from 'react';
+import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 import {Redirect} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import {Switch} from 'react-router-dom';
 import {Welcome} from './pages/welcome.js'; 
+import {store} from './store.js';
 
 
 /**
@@ -21,13 +23,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-				<BrowserRouter>
-					<Switch>
-						<Redirect path="/authorized" to="/home" />
-						<Route path="/" exact component={Welcome} />
-						<Route path="/home" />
-					</Switch>
-				</BrowserRouter>
+		<Provider store={store}>
+			<BrowserRouter>
+				<Switch>
+					<Redirect path="/authorized" to="/home" />
+					<Route path="/" exact component={Welcome} />
+					<Route path="/home" />
+				</Switch>
+			</BrowserRouter>
+		</Provider>
     </div>
   );
 }
