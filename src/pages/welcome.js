@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import {useEffect} from 'react';
-import {useState} from 'react';
 
 
 /**
@@ -17,9 +16,6 @@ import spotifood from '../assets/spotifood_name.png';
  * CODE
  */
 function Welcome () {
-    // page is loading state
-    const [authorized, setAuthorized] = useState(false);
-
     // function to handle click on login button
     function handleClick(event) {
         event.preventDefault();
@@ -37,28 +33,23 @@ function Welcome () {
         const tokenType = searchParams.get('token_type');
         const expires = searchParams.get('expires_in');
         
-        // access token exists: save data on browser local storage and authorize
+        // access token exists: save data on browser local storage and redirect
         if (token !== null) {
             localStorage.setItem('access_token', token);
             localStorage.setItem('token_type', tokenType);
             localStorage.setItem('expires_in', expires);
-            window.history.pushState({ urlPath: '/authorized' }, '', '/authorized');
-            setAuthorized(true);
-
-            // reload window;
+            
+            // redirect to home page
+            window.history.pushState({urlPath: '/authorized' }, '', '/authorized');
             window.location.reload();
         }
     }, []);
 
     return (
-        <div>
-            {!authorized &&
-                (<div>
-                    <img src={spotifood}></img>
-                    <p>Bem vindo ao Spotifood! Para continuar por favor entre com uma conta Spotify</p>
-                    <button className="login" onClick={handleClick} on>ENTRAR</button>
-                </div>)
-            }
+        <div>            
+            <img alt="logo" src={spotifood}></img>
+            <p>Bem vindo ao Spotifood! Para continuar por favor entre com uma conta Spotify</p>
+            <button className="login" onClick={handleClick}>ENTRAR</button>
         </div>
     )
 }
