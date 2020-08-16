@@ -8,6 +8,42 @@
     width: 100%;
 }
 
+.displaybutton {
+    background-color:  rgb(240, 76, 42);
+    border-radius: 100px;
+    border-width: 0px;
+    color: black;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-top: 25px;
+    height: 35px;
+    width: 80px;
+    outline: none;
+}
+
+.displaybutton:hover {
+    background-color: rgb(210, 45, 35);
+}
+
+.displayheader {
+    display: flex;
+    flex-direction: row;
+}
+
+.displaylist {
+    display: flex;
+    flex-direction: column;
+    height: 490px;
+    margin: 10px 25px;
+    overflow-y: auto;
+    width: 100%;
+}
+
 .displaytitle {
     margin: 25px;
     text-align: left;

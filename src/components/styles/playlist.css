@@ -3,6 +3,10 @@ img {
     margin-top: 10px;
 }
 
+.containerrow {
+    display: block;
+}
+
 .desc {
     color: rgb(180,180,180);
     font-size: 14px;
@@ -12,6 +16,27 @@ img {
     overflow-y: hidden;
     text-align: left;
     width: 162.5px;
+}
+
+.descrow {
+    color: rgb(180,180,180);
+    font-size: 14px;
+    margin-left: 15px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: left;
+}
+
+.footer {
+    color: white;
+    margin-left: 15px;
+    text-align: left;    
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+.imgrow {
+    margin: 10px;
 }
 
 .p {
@@ -33,10 +58,30 @@ img {
     max-width: 178.5px;
 }
 
+.playlistrow {
+    background-color: rgb(39,39,39);
+    border: solid;
+    border-color: rgb(38,38,38);
+    border-width: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    max-height: 150px;
+    max-width: 100%;
+}
+
 .title {
     font-size: 16px;
     margin-bottom: 5px;
     margin-top: 5px;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+.titlerow {
+    margin-left: 15px;
+    margin-top: 25px;
+    text-align: left;
 }
