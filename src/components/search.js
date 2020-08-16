@@ -16,6 +16,7 @@ import './styles/search.css'
  * CODE
  */
 function Search () {
+    // component dispatch
     const dispatch = useDispatch();
 
     // function to handle change on input
