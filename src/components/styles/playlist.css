@@ -47,6 +47,14 @@ img {
     text-align: left;
 }
 
+.prow {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    text-align: left;
+}
+
 .playlist {
     background-color: rgb(39,39,39);
     border: solid;
@@ -81,7 +89,6 @@ img {
 }
 
 .titlerow {
-    margin-left: 15px;
-    margin-top: 25px;
+    margin: 15px;
     text-align: left;
 }

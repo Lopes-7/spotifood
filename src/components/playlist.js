@@ -36,6 +36,7 @@ function Playlist (props) {
                  width="120" 
                  src={data.images[0].url}></img>
             <div className={displayBy === 'grid' ? "container": "containerrow"} >
+                {displayBy === 'list' && (<p className="prow">PLAYLIST</p>)}
                 <h1 className={displayBy === 'grid' ? "title": "titlerow"}>{data.name}</h1>
                 <p className={displayBy === 'grid' ? "desc": "descrow"}>{data.description}</p>
                 {displayBy === 'list' && (
