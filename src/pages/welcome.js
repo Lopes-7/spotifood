@@ -21,7 +21,8 @@ function Welcome () {
         event.preventDefault();
         
         // redirect to spotify login page
-        window.open('https://accounts.spotify.com/authorize?client_id=708980b1d1d646ab98321c40bb7286e9&response_type=token&redirect_uri=http%3A%2F%2Flocalhost%3A3000',
+        window.open('https://accounts.spotify.com/authorize?client_id=708980b1d1d646ab98321c40bb7286e9&response_type=token&redirect_uri='
+        + encodeURIComponent(process.env.REACT_APP_URL),
                     '_self');
     }
     
